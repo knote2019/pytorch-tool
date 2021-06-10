@@ -1,0 +1,13 @@
+
+
+Torch是一个广泛支持机器学习算法的科学计算框架。
+Torch 非常适用于卷积神经网络。
+
+
+机器学习是一种实现人工智能的方法，深度学习是一种实现机器学习的技术。
+深度学习是由多个处理层（隐藏层）组成的计算模型。
+卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且
+具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一。
+
+
+Computational Network Toolkit (CNTK) 是微软出品的开源深度学习工具包。
