@@ -1,0 +1,42 @@
+
+
+------------------------------------------------------------------------------------------------------------------------
+https://pytorch.org/get-started/previous-versions/
+
+------------------------------------------------------------------------------------------------------------------------
+NOTE:
+pip3 install numpy
+pip3 install matplotlib
+
+------------------------------------------------------------------------------------------------------------------------
+下面链接可以找到安装命令:
+https://pytorch.org/get-started/locally/
+
+pip3 install torch==1.8.2+cu102 torchvision==0.9.2+cu102 torchaudio==0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
+
+------------------------------------------------------------------------------------------------------------------------
+安装日志:
+root@~:~# pip3 install torch==1.8.2+cu102 torchvision==0.9.2+cu102 torchaudio==0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
+Looking in links: https://download.pytorch.org/whl/lts/1.8/torch_lts.html
+Collecting torch==1.8.2+cu102
+  Downloading https://download.pytorch.org/whl/lts/1.8/cu102/torch-1.8.2%2Bcu102-cp38-cp38-linux_x86_64.whl (804.1 MB)
+     |████████████████████████████████| 804.1 MB 33 kB/s
+Collecting torchvision==0.9.2+cu102
+  Downloading https://download.pytorch.org/whl/lts/1.8/cu102/torchvision-0.9.2%2Bcu102-cp38-cp38-linux_x86_64.whl (17.3 MB)
+     |████████████████████████████████| 17.3 MB 2.9 MB/s
+Collecting torchaudio==0.8.2
+  Downloading https://download.pytorch.org/whl/lts/1.8/torchaudio-0.8.2-cp38-cp38-linux_x86_64.whl (1.9 MB)
+     |████████████████████████████████| 1.9 MB 7.0 MB/s
+Requirement already satisfied: numpy in /usr/local/lib/python3.8/dist-packages (from torch==1.8.2+cu102) (1.21.4)
+Collecting typing-extensions
+  Downloading typing_extensions-4.0.1-py3-none-any.whl (22 kB)
+Requirement already satisfied: pillow>=4.1.1 in /usr/lib/python3/dist-packages (from torchvision==0.9.2+cu102) (7.0.0)
+Installing collected packages: typing-extensions, torch, torchvision, torchaudio
+Successfully installed torch-1.8.2+cu102 torchaudio-0.8.2 torchvision-0.9.2+cu102 typing-extensions-4.0.1
+
+------------------------------------------------------------------------------------------------------------------------
+安装列表:
+root@~:~# pip list|grep torch
+torch                         1.8.2+cu102
+torchaudio                    0.8.2
+torchvision                   0.9.2+cu102
