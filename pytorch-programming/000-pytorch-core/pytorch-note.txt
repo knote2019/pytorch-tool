@@ -1,0 +1,62 @@
+
+
+------------------------------------------------------------------------------------------------------------------------
+1.forward算损失loss.
+2.backward算梯度grad.
+3.然后用梯度下降算法更新权重.
+
+NOTE:
+loss值是一个标量 否则是没法backward的.
+
+------------------------------------------------------------------------------------------------------------------------
+BN: batch normalize
+spatial transformation: 空间变换
+bias tensor: 偏移量tensor
+cross-correlation: 互相关
+
+归一化层:
+归一化层可以一定程度上避免输入数据分布的偏移问题，
+最早大概是AlexNet提出的LRN（Local Response Normalization）虽然不太成功，
+而应用最广泛的便是Google团队提出的Batch Normalization了，基本成为CNN的基础结构。
+
+激活函数:
+正如卷积一节中所说，其操作本身为线性，而线性操作的叠加仍然是线性，故需要引入非线性操作来更好提取有效信息。
+早期网络使用Sigmoid及tanh，存在梯度消失/收敛困难和计算量大的问题。
+CNN中最最最常用的是ReLU函数，大部分架构使用其作为基准调参，在一些比赛和实践中ELU、PReLU、SELU表现更好一些。
+最近的研究提出Swish函数大多数情况可取得sota表现（Google，2017）[2]，而在Transformer模型中（谷歌的 BERT 和 OpenAI 的 GPT-2）使用GELU（高斯误差线性单元）。
+
+------------------------------------------------------------------------------------------------------------------------
+A 4-D tensor descriptor is used to define the format for batches of 2D images with 4 letters:
+N,C,H,W for respectively the batch size, the number of feature maps, the height and the width.
+The letters are sorted in decreasing order of the strides.
+The commonly used 4-D tensor formats are:
+NCHW
+NHWC
+CHWN
+
+------------------------------------------------------------------------------------------------------------------------
+A 5-D tensor descriptor is used to define the format of the batch of 3D images with 5 letters:
+N,C,D,H,W for respectively the batch size, the number of feature maps, the depth, the height, and the width.
+The letters are sorted in decreasing order of the strides.
+The commonly used 5-D tensor formats are called:
+NCDHW
+NDHWC
+CDHWN
+
+------------------------------------------------------------------------------------------------------------------------
+Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks.
+It provides highly tuned implementations of routines arising frequently in DNN applications:
+>>>
+1. Convolution forward and backward, including cross-correlation
+2. Pooling forward and backward
+3. Softmax forward and backward
+4. Neuron activations forward and backward:
+    4.1 Rectified linear (ReLU)
+    4.2 Sigmoid
+    4.3 Hyperbolic tangent (TANH)
+5. Tensor transformation functions
+6. LRN, LCN and batch normalization forward and backward
+
+------------------------------------------------------------------------------------------------------------------------
+cuDNN convolution routines aim for a performance that is competitive with the fastest GEMM (matrix multiply)-based
+implementations of such routines while using significantly less memory.
