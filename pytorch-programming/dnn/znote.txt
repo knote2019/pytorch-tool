@@ -1,4 +1,8 @@
 
-https://blog.csdn.net/Pin_BOY/article/details/119707358
 
+bilibili的图:
+https://blog.csdn.net/Pin_BOY/article/details/119707358
 https://blog.csdn.net/qq_34745777/article/details/117000433?spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-8.fixedcolumn&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-8.fixedcolumn
+
+里面的反向传播解释图比较好:
+https://blog.csdn.net/chenhoujiangsir/article/details/51077468?utm_source=app&app_version=4.5.8

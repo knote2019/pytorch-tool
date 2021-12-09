@@ -7,10 +7,7 @@ import torch
 
 x = torch.tensor([2., 4., 6.])
 x.requires_grad = True  # 开启梯度
+b = x.T
 y = x.T * x * 2  # 开始构建计算图
 y.sum().backward()
 print(x.grad)
-
-from torchvision import utils as vutils
-
-vutils.save_image(x, './test.jpg', normalize=True)

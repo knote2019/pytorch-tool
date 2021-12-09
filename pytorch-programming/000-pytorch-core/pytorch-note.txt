@@ -60,3 +60,17 @@ It provides highly tuned implementations of routines arising frequently in DNN a
 ------------------------------------------------------------------------------------------------------------------------
 cuDNN convolution routines aim for a performance that is competitive with the fastest GEMM (matrix multiply)-based
 implementations of such routines while using significantly less memory.
+
+------------------------------------------------------------------------------------------------------------------------
+Torch定义了七种CPU tensor类型和八种GPU tensor类型:
+Data tyoe	                CPU tensor	            GPU tensor
+32-bit floating point	    torch.FloatTensor	    torch.cuda.FloatTensor
+64-bit floating point	    torch.DoubleTensor	    torch.cuda.DoubleTensor
+16-bit floating point	    N/A	                    torch.cuda.HalfTensor
+8-bit integer (unsigned)	torch.ByteTensor	    torch.cuda.ByteTensor
+8-bit integer (signed)	    torch.CharTensor	    torch.cuda.CharTensor
+16-bit integer (signed)	    torch.ShortTensor	    torch.cuda.ShortTensor
+32-bit integer (signed)	    torch.IntTensor	        torch.cuda.IntTensor
+64-bit integer (signed)	    torch.LongTensor	    torch.cuda.LongTensor
+
+------------------------------------------------------------------------------------------------------------------------
