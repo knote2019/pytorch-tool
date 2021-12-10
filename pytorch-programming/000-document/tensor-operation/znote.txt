@@ -1,0 +1,59 @@
+
+
+------------------------------------------------------------------------------------------------------------------------
+创建特殊值组成的tensor:
+torch.zeros(*sizes, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.zeros_like(input, dtype=None, layout=None, device=None, requires_grad=False)
+torch.ones(*sizes, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.ones_like(input, dtype=None, layout=None, device=None, requires_grad=False)
+torch.eye(n, m=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.empty(*sizes, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.empty_like(input, dtype=None, layout=None, device=None, requires_grad=False)
+torch.full(size, fill_value, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.full_like(input, fill_value, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+
+按照步长或者区间创建tensor:
+torch.arange(start=0, end, step=1, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.range(start=0, end, step=1, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.linspace(start, end, steps=100, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+torch.logspace(start, end, steps=100, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False)
+
+------------------------------------------------------------------------------------------------------------------------
+组合
+torch.cat(seq, dim=0, out=None)：按照已经存在的维度进行concatenate。
+torch.stack(seq, dim=0, out=None)：按照新的维度进行concatenate。
+
+分块
+torch.chunk(tensor, chunks, dim=0)：按照某个维度平均分块（最后一个可能小于平均值）
+torch.split(tensor, split_size_or_sections, dim=0）：按照某个维度依照第二个参数给出的list或者int进行分割tensor。
+
+索引
+torch.gather(input, dim, index, out=None)：在指定维度上按照索引赋值输出tensor。输入与输出大小一致。
+torch.index_select(input, dim, index, out=None)：选出一维度的一些slice组合成新的tensor。指定维度的大小与index大小一致。
+torch.masked_select(input, mask, out=None)：按照mask输出一个一维的tensor。
+torch.take(input, indices)：将输入看成1D tensor，按照索引得到输出。输出大小与index大小一致。
+torch.nonzero(input, out=None)：输出非0 元素的坐标。
+torch.where(condition, x, y)：按照条件从x和y中选出满足条件的元素组成新的tensor。
+
+变形
+torch.reshape(input, shape)
+torch.t(input)： 只针对2D tensor转置
+torch.transpose(input, dim0, dim1)：交换两个维度
+
+torch.squeeze(input, dim=None, out=None)：去除那些维度大小为1的维度
+torch.unbind(tensor, dim=0)：去除某个维度
+torch.unsqueeze(input, dim, out=None)：在指定位置添加维度。
+
+------------------------------------------------------------------------------------------------------------------------
+Reduction Ops
+torch.dist(input, other, p=2)
+计算p范数
+
+torch.norm()
+计算2范数
+
+torch.prod()
+计算所有元素的积
+
+torch.unique(input, sorted=False, return_inverse=False)
+以1D向量保存张量中不同的元素。
