@@ -1,0 +1,4 @@
+
+
+详解pytorch中nn模块的BatchNorm2d()函数:
+https://blog.csdn.net/bigFatCat_Tom/article/details/91619977

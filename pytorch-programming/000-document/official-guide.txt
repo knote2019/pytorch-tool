@@ -1,3 +1,7 @@
 
 
 https://pytorch.org/tutorials/beginner/pytorch_with_examples.html
+
+
+看pytorch文档学深度学习:
+https://www.zhihu.com/column/c_1190230817132081152
