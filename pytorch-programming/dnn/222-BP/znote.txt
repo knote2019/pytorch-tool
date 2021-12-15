@@ -1,0 +1,4 @@
+
+
+反向传播梯度(好视频):
+https://www.bilibili.com/video/BV1Af4y187fi?from=search&seid=10389992513009695144&spm_id_from=333.337.0.0
